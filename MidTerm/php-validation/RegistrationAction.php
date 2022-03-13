@@ -112,45 +112,31 @@
 
 		if(empty($err_msg))
 		{
-			echo "<h1>Basic Information</h1>";
-			echo "First Name:";
-			echo $fname;
-			echo "<br>";
-			echo "Last Name:";
-			echo $lname;
-			echo "<br>";
-			echo "Gender:";
-			echo $gender;
-			echo "<br>";
-			echo "Date Of Birth:";
-			echo $dob;
-			echo "<br>";
-			echo "Religion:";
-			echo $religion;
-			echo "<br>";
-			echo "<h1>Contact Information</h1>";
-			echo "Present Address:";
-			echo $praddress;
-			echo "<br>";
-			echo "Permanent Address:";
-			echo $peaddress;
-			echo "<br>";
-			echo "Phone Number:";
-			echo $phone;
-			echo "<br>";
-			echo "Email:";
-			echo $email;
-			echo "<br>";
-			echo "Website URL:";
-			echo $url;
-			echo "<br>";
-			echo "<h1>Credentials</h1>";
-			echo "Username:";
-			echo $uname;
-			echo "<br>";
-			echo "Password:";
-			echo $password;
-			echo "<br>";
+				define("FILENAME", "data.json");
+				$file1 = fopen(FILENAME, "r");
+				$fr = fread($file1, filesize(FILENAME));
+				$json = json_decode($fr);
+				fclose($file1);
+
+				$file2 = fopen(FILENAME, "w");
+				$data = array("firstname" => $fname, "lastname" => $lname, "gender" => $gender, "dateofbirth" => $dob, "religion" => $religion, "presentaddress" => $praddress, "permanentaddress" => $peaddress, "phonenumber" => $phone, "email" => $email, "url" => $url, "username" => $uname, "password" => $password);
+
+				if ($json === NULL) {
+					$data = array($data);
+					$data = json_encode($data);
+					fwrite($file2, $data);
+				}
+				else {
+					$json[] = $data; 
+					$data = json_encode($json);
+					fwrite($file2, $data);
+				}
+				fclose($file2);
+
+				$data = json_decode($data);
+
+				echo "Registration Successful";
+
 		}
 
 		else
