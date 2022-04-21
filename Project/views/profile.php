@@ -1,0 +1,99 @@
+    <?php include ("../controller/profile.php");?>
+    <?php include "Navbar2.php"?>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Profile</title>
+        <style>
+       
+
+        .button-30 {
+          align-items: center;
+          appearance: none;
+          background-color: #FCFCFD;
+          border-radius: 4px;
+          border-width: 0;
+          box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+          box-sizing: border-box;
+          color: #36395A;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: "JetBrains Mono",monospace;
+          height: 48px;
+          justify-content: center;
+          line-height: 1;
+          list-style: none;
+          overflow: hidden;
+          padding-left: 16px;
+          padding-right: 16px;
+          position: relative;
+          text-align: left;
+          text-decoration: none;
+          transition: box-shadow .15s,transform .15s;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          white-space: nowrap;
+          will-change: box-shadow,transform;
+          font-size: 18px;
+        }
+
+        .button-30:focus {
+          box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+
+        .button-30:hover {
+          box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+          transform: translateY(-2px);
+        }
+
+        .button-30:active {
+          box-shadow: #D6D6E7 0 3px 7px inset;
+          transform: translateY(2px);
+}
+</style>
+    </head>
+    <body style="background-color: <?php echo $bgcolor ?> ;">
+    <br><br><br>
+    <h1 align="center">Profile</h1>
+    <p>
+
+    <table align="center" border="0">
+        <tbody align="center" class="font">
+            <?php
+                $i=1;
+                foreach($prof1 as $df){
+                    echo "<tr>";
+                        echo "<td>"."First Name"."</td>";
+                        echo "<td>" .$df["fname"]."</td>";
+                        echo "</tr>";
+                        echo "<tr>";
+                        echo "<td>"."Last Name"."</td>";
+                        echo "<td>" .$df["lname"]."</td>";
+                        echo "</tr>";
+                        echo "<tr>";
+                        echo "<td>"."Gender"."</td>";
+                        echo "<td>" .$df["gender"]."</td>";
+                        echo "</tr>";
+                        echo "<tr>";
+                        echo "<td>"."Username"."</td>";
+                        echo "<td>" .$df["username"]."</td>";
+                        echo "</tr>";
+                        echo "<tr>";
+                    echo "</tr>";
+                    $i++;
+                }
+            ?>
+            
+            
+        </tbody>
+        </table>
+    <p>
+    <div align="center">    
+    <a class="button-30" href="editprof.php">Edit Profile</a>
+    <a class="button-30" href="cpassword.php">Change Password</a>
+    </div>
+</body>
+</html>
