@@ -1,6 +1,6 @@
     <?php
     session_start();
-    $bgcolor="";
+    $bgcolor="#FFFFFF";
 
     if(isset($_COOKIE['bgcolor'])){
         $bgcolor = $_COOKIE['bgcolor'];
@@ -19,9 +19,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Welcome</title>
+        <style>
+            .header1{
+                color: white;
+            }
+        </style>
     </head>
     <body style="background-color: <?php echo $bgcolor ?> ;">
-    <h1> Welcome,<?php echo $_SESSION['username'];?></h1>
+    <h1 class ="header1" > Welcome,<?php echo $_SESSION['username'];?></h1>
     
 </body>
 </html>

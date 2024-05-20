@@ -63,6 +63,7 @@ while($res = mysqli_fetch_array($result))
 <html>
 <head>  
     <title>Edit Data</title>
+    <link rel="stylesheet" type="text/css" href="./update.css">
 </head>
 
 <body>

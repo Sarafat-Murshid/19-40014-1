@@ -6,22 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Create Inventory</title>
-    <style>
-        .login-form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 40px;
-        color: white;
-        background: rgba(0, 0, 0, 0.8);
-        border-radius: 10px;
-        box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
-        0 1px 1px rgba(128, 128, 128, 0.155),
-        0 2.1px 2.1px rgba(128, 128, 128, 0.195),
-        0 4.4px 4.4px rgba(128, 128, 128, 0.241),
-        0 12px 12px rgba(128, 128, 128, 0.35);
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./create.css">
 </head>
 <body>
 <form class="login-form" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST" novalidate>

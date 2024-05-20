@@ -14,7 +14,7 @@ body {
   width: 100%;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)),url(background.jpg);
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   position: relative;	
   font-family: sans-serif;
   color: darkgoldenrod;
@@ -25,6 +25,7 @@ body {
 .header {
   padding: 20px;
   text-align: center;
+  color: white;
 }
 
 /* Style the top navigation bar */
@@ -50,16 +51,17 @@ body {
 }
 
 .logo{
-  height: 100px;
-  width: 100px;
-  position: sticky;
+  height: 80px;
+  width: 80px;
+  position: static;
+  float: left;
 }
 
 </style>
 </head>
 <body>
-<a href="Welcome.php"><img class="logo" src="logo.png"></a>
 <div class="header">
+  <a href="Welcome.php"><img class="logo" src="logo.png"></a>
   <h1>University Management System</h1>
 </div>
 

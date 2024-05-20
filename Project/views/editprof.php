@@ -97,19 +97,38 @@
 	<title>Change Password</title>
 	<style>
 		.login-form {
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
-	  padding: 50px 40px;
-	  color: white;
-	  background: rgba(0, 0, 0, 0.8);
-	  border-radius: 10px;
-	  box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
-	    0 1px 1px rgba(128, 128, 128, 0.155),
-	    0 2.1px 2.1px rgba(128, 128, 128, 0.195),
-	    0 4.4px 4.4px rgba(128, 128, 128, 0.241),
-	    0 12px 12px rgba(128, 128, 128, 0.35);
-	}
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 50px 40px;
+			color: white;
+			background: rgba(0, 0, 0, 0.4);
+			border-radius: 10px;
+			box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+				0 1px 1px rgba(128, 128, 128, 0.155),
+				0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+				0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+				0 12px 12px rgba(128, 128, 128, 0.35);
+		}
+		input[type="text"] {
+			width: 10%;
+			padding: 10px;
+			margin: 5px 0;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+		input[type="submit"] {
+			width: 10%;
+			background-color: #4caf50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			font-size: 16px;
+		}
 	</style>
 </head>
 <body>

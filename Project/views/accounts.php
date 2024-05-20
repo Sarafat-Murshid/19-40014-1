@@ -25,13 +25,16 @@ $result = mysqli_query($mysqli, "SELECT * FROM inventory");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Inventory</title>
+    <link rel="stylesheet" type="text/css" href="./infotable.css">
 </head>
 <body style="background-color: <?php echo $bgcolor ?> ;">
-<br><br><br>
+<br>
+<div class="header1">
     <h1>Inventory</h1>
+</div>
 <div class="container">
     <p>
-        <a class="btn btn-success" href="create.php">Create new Inventory</a>
+        <a class="button-link create" href="create.php">Create new Inventory</a>
     </p>
 
     <table border="0" width="100%" class="table">
@@ -58,7 +61,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM inventory");
             echo "<td>".$res['chair']."</td>";  
             echo "<td>".$res['tables']."</td>";   
             echo "<td>".$res['computer']."</td>"; 
-            echo "<td><a href=\"update.php?id=$res[id]\">Update</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
+            echo "<td><a href=\"update.php?id=$res[id]\" class=\"button-link update\">Update</a> | <a href=\"delete.php?id=$res[id]\" class=\"button-link delete\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
             echo "</tr>";    
         }
         ?>
